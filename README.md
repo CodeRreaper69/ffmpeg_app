@@ -15,6 +15,8 @@ This repository contains a Python script (`ffmpeg_operation.py`) that leverages 
 
    - **Windows:**
      Download FFmpeg from the [official website](https://ffmpeg.org/download.html) and follow the installation instructions.
+     Adding ffmpeg to path
+     - Go to ffmpeg path an copy this path "ffmpeg-7.0.1-essentials_build\bin" to the envionment variables path, then 
    - **macOS:**
      ```sh
      brew install ffmpeg
@@ -24,11 +26,7 @@ This repository contains a Python script (`ffmpeg_operation.py`) that leverages 
      bash run.sh
      
      ```
-     # this will install all necessary files and packages, in one single command
-
-3. **Install required Python packages (if any):**
-
-   This script uses the `subprocess` and `re` modules, which are included in the standard Python library. No additional packages are required.
+     # this will install all necessary files and packages, in one single command for Debian based users only
 
 ## Usage
 
