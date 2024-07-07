@@ -7,7 +7,7 @@ This repository contains a Python script (`ffmpeg_operation.py`) that leverages 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your_username/ffmpeg_app.git
+   git clone https://github.com/CodeRreaper69/ffmpeg_app
    cd ffmpeg_app
    ```
 
