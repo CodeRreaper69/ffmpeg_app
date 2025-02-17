@@ -150,6 +150,13 @@ def convert_video_format(input_file, output_format, output_file):
     subprocess.run(ffmpeg_command)
     print(f"Video format converted successfully. Saved as {output_file}.{output_format}")
 
+def remove_audio(input_file, output_file):
+    ffmpeg_command = [
+        'ffmpeg', '-i', input_file, '-an', '-c:v', 'copy', output_file
+    ]
+    subprocess.run(ffmpeg_command)
+    print(f"Audio removed successfully. Saved as {output_file}")
+
 def main():
     print("Choose an operation:")
     print("1. Cut Video")
@@ -165,6 +172,7 @@ def main():
     print("11. Convert Audio Format")
     print("12. Create Video Slideshow from Images")
     print("13. Convert Video Format")
+    print("14. Remove Audio from Video")
     
     choice = input("Enter the number of the operation you want to perform: ")
 
@@ -245,6 +253,11 @@ def main():
         output_format = input("Enter the desired output video format (e.g., mp4, mkv): ")
         output_file = input("Enter the desired output file name (without extension): ")
         convert_video_format(input_file, output_format, output_file)
+        
+    elif choice == '14':  # New option to remove audio
+        input_file = input("Enter the path to the input video file: ")
+        output_file = input("Enter the desired output file name (with extension): ")
+        remove_audio(input_file, output_file)
 
 if __name__ == "__main__":
     main()
